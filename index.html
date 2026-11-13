@@ -21,17 +21,8 @@
     --radius-sm: 14px;
   }
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
 
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -54,10 +45,7 @@
       radial-gradient(700px circle at 82% 0%, rgba(79, 140, 255, 0.13), transparent 45%);
   }
 
-  .wrap {
-    position: relative;
-    z-index: 1;
-  }
+  .wrap { position: relative; z-index: 1; }
 
   /* ============ NAV ============ */
   .nav {
@@ -102,435 +90,127 @@
     flex: none;
   }
 
-  .logo-mark svg {
-    color: #fff;
-  }
+  .logo-mark svg { color: #fff; }
 
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: color 0.2s ease;
-  }
-
-  .nav-links a:hover {
-    color: var(--text);
-  }
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s ease; }
+  .nav-links a:hover { color: var(--text); }
 
   /* ============ HERO ============ */
-  .hero {
-    padding: 92px 24px 40px;
-    text-align: center;
-  }
-
+  .hero { padding: 92px 24px 40px; text-align: center; }
   .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 7px 16px;
-    border-radius: 100px;
-    border: 1px solid var(--border-strong);
-    background: rgba(255, 255, 255, 0.03);
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--muted);
+    display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 100px;
+    border: 1px solid var(--border-strong); background: rgba(255, 255, 255, 0.03);
+    font-size: 13px; font-weight: 500; color: var(--muted);
   }
-
-  .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #34d399;
-    box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.18);
-    flex: none;
-  }
-
-  h1 {
-    font-size: clamp(36px, 6.2vw, 68px);
-    line-height: 1.06;
-    letter-spacing: -0.04em;
-    font-weight: 800;
-    margin: 26px 0 20px;
-  }
-
-  .grad {
-    background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
-  .sub {
-    max-width: 560px;
-    margin: 0 auto;
-    color: var(--muted);
-    font-size: 17px;
-  }
-
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 34px;
-  }
-
-  /* ============ SCREENSHOT ============ */
-  .screenshot-frame {
-    position: relative;
-    max-width: 960px;
-    margin: 56px auto 0;
-    aspect-ratio: 16 / 9;
-    border-radius: 28px;
-    overflow: hidden;
-    border: 1px solid var(--border-strong);
-    background: linear-gradient(180deg, #12121b 0%, #0a0a10 100%);
-    box-shadow: 0 50px 100px -30px rgba(0, 0, 0, 0.9),
-                0 0 0 1px rgba(255, 255, 255, 0.03) inset;
-  }
-
-  .screenshot-hint {
-    position: absolute;
-    inset: 16px;
-    border: 1.5px dashed rgba(255, 255, 255, 0.16);
-    border-radius: 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    text-align: center;
-    padding: 20px;
-    color: var(--muted);
-  }
-
-  .screenshot-hint svg {
-    opacity: 0.45;
-  }
-
-  .screenshot-hint p {
-    font-size: 15px;
-    font-weight: 600;
-    color: #b8b8c4;
-  }
-
-  .screenshot-hint span {
-    font-size: 13px;
-  }
-
-  .screenshot-hint code {
-    background: rgba(255, 255, 255, 0.07);
-    padding: 2px 7px;
-    border-radius: 6px;
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 12px;
-    color: #c4b5fd;
-  }
-
-  .app-shot {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: #34d399; box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.18); flex: none; }
+  h1 { font-size: clamp(36px, 6.2vw, 68px); line-height: 1.06; letter-spacing: -0.04em; font-weight: 800; margin: 26px 0 20px; }
+  .grad { background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .sub { max-width: 560px; margin: 0 auto; color: var(--muted); font-size: 17px; }
+  .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 34px; }
 
   /* ============ SECTIONS ============ */
-  .apps,
-  .how {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 84px 24px;
-  }
-
-  .section-head {
-    max-width: 640px;
-    margin: 0 auto 48px;
-    text-align: center;
-  }
-
-  .section-head h2 {
-    font-size: clamp(28px, 4vw, 40px);
-    letter-spacing: -0.03em;
-    font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 14px;
-  }
-
-  .section-head p {
-    color: var(--muted);
-    font-size: 16px;
-  }
-
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
+  .apps, .how { max-width: 1120px; margin: 0 auto; padding: 84px 24px; }
+  .section-head { max-width: 640px; margin: 0 auto 48px; text-align: center; }
+  .section-head h2 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.03em; font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+  .section-head p { color: var(--muted); font-size: 16px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
   /* ============ CARDS ============ */
   .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    position: relative; display: flex; flex-direction: column;
     background: linear-gradient(180deg, #13131c 0%, #0c0c12 100%);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 36px 32px 32px;
-    overflow: hidden;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 36px 32px 32px; overflow: hidden;
     transition: border-color 0.3s ease, transform 0.3s ease;
   }
-
   .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 22%;
-    right: 22%;
-    height: 1px;
+    content: ''; position: absolute; top: 0; left: 22%; right: 22%; height: 1px;
     background: linear-gradient(90deg, transparent, rgba(124, 92, 255, 0.65), transparent);
   }
+  .card:hover { border-color: var(--border-strong); transform: translateY(-3px); }
 
-  .card:hover {
-    border-color: var(--border-strong);
-    transform: translateY(-3px);
-  }
+  .card-icon { width: 54px; height: 54px; border-radius: 16px; display: grid; place-items: center; margin-bottom: 22px; }
+  .card-icon.music { background: linear-gradient(135deg, rgba(124, 92, 255, 0.26), rgba(124, 92, 255, 0.07)); border: 1px solid rgba(124, 92, 255, 0.32); color: #a78bfa; }
+  .card-icon.video { background: linear-gradient(135deg, rgba(79, 140, 255, 0.26), rgba(79, 140, 255, 0.07)); border: 1px solid rgba(79, 140, 255, 0.32); color: #60a5fa; }
 
-  .card-icon {
-    width: 54px;
-    height: 54px;
-    border-radius: 16px;
-    display: grid;
-    place-items: center;
-    margin-bottom: 22px;
-  }
+  .card h3 { font-size: 21px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .card > p { color: var(--muted); font-size: 14.5px; line-height: 1.65; }
 
-  .card-icon.music {
-    background: linear-gradient(135deg, rgba(124, 92, 255, 0.26), rgba(124, 92, 255, 0.07));
-    border: 1px solid rgba(124, 92, 255, 0.32);
-    color: #a78bfa;
+  /* ============ SCREENSHOT GALLERY ============ */
+  .screenshots-gallery {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
   }
-
-  .card-icon.video {
-    background: linear-gradient(135deg, rgba(79, 140, 255, 0.26), rgba(79, 140, 255, 0.07));
-    border: 1px solid rgba(79, 140, 255, 0.32);
-    color: #60a5fa;
+  .screenshots-gallery::-webkit-scrollbar { display: none; /* Chrome/Safari */ }
+  
+  .gallery-img {
+    height: 220px;
+    width: auto;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    object-fit: cover;
+    scroll-snap-align: start;
+    background-color: #1a1a24;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
   }
-
-  .card h3 {
-    font-size: 21px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 10px;
-  }
-
-  .card > p {
-    color: var(--muted);
-    font-size: 14.5px;
-    line-height: 1.65;
-  }
+  .gallery-img:hover { transform: scale(1.02); }
 
   /* ============ TAGS ============ */
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 20px;
-  }
-
-  .tag {
-    font-size: 12px;
-    font-weight: 500;
-    padding: 5px 11px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--border);
-    color: var(--muted);
-  }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .tag { font-size: 12px; font-weight: 500; padding: 5px 11px; border-radius: 8px; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border); color: var(--muted); }
 
   /* ============ DOWNLOAD BUTTONS ============ */
   .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    padding: 15px 26px;
-    border: none;
-    border-radius: var(--radius-sm);
-    font-family: inherit;
-    font-size: 14.5px;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    white-space: nowrap;
-    cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+    padding: 15px 26px; border: none; border-radius: var(--radius-sm);
+    font-family: inherit; font-size: 14.5px; font-weight: 600; color: #fff;
+    text-decoration: none; white-space: nowrap; cursor: pointer;
     transition: transform 0.15s ease, filter 0.2s ease, box-shadow 0.2s ease;
   }
+  .btn:hover { filter: brightness(1.12); }
+  .btn:active { transform: scale(0.97); }
+  .btn:focus-visible { outline: 2px solid #a78bfa; outline-offset: 3px; }
+  .btn-music { background: linear-gradient(135deg, #8b5cf6, #6d3fd6); box-shadow: 0 8px 24px -6px rgba(124, 92, 255, 0.6); }
+  .btn-video { background: linear-gradient(135deg, #3b82f6, #2563eb); box-shadow: 0 8px 24px -6px rgba(59, 130, 246, 0.6); }
+  .btn-block { width: 100%; margin-top: auto; padding-top: 15px; margin-top: 24px; }
 
-  .btn:hover {
-    filter: brightness(1.12);
-  }
-
-  .btn:active {
-    transform: scale(0.97);
-  }
-
-  .btn:focus-visible {
-    outline: 2px solid #a78bfa;
-    outline-offset: 3px;
-  }
-
-  .btn-music {
-    background: linear-gradient(135deg, #8b5cf6, #6d3fd6);
-    box-shadow: 0 8px 24px -6px rgba(124, 92, 255, 0.6);
-  }
-
-  .btn-video {
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
-    box-shadow: 0 8px 24px -6px rgba(59, 130, 246, 0.6);
-  }
-
-  .btn-ghost {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-strong);
-    box-shadow: none;
-  }
-
-  .btn-block {
-    width: 100%;
-    margin-top: 28px;
-  }
-
-  .meta {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-top: 14px;
-    font-size: 12.5px;
-    color: var(--muted);
-  }
-
-  .meta span {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-  }
+  .meta { display: flex; align-items: center; gap: 14px; margin-top: 14px; font-size: 12.5px; color: var(--muted); }
+  .meta span { display: inline-flex; align-items: center; gap: 5px; }
 
   /* ============ STEPS ============ */
-  .step {
-    background: linear-gradient(180deg, #13131c 0%, #0c0c12 100%);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 30px 26px;
-    transition: border-color 0.3s ease;
-  }
-
-  .step:hover {
-    border-color: var(--border-strong);
-  }
-
-  .step-num {
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    color: #a78bfa;
-    margin-bottom: 14px;
-  }
-
-  .step h3 {
-    font-size: 17px;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    margin-bottom: 8px;
-  }
-
-  .step p {
-    color: var(--muted);
-    font-size: 14px;
-  }
+  .step { background: linear-gradient(180deg, #13131c 0%, #0c0c12 100%); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px 26px; transition: border-color 0.3s ease; }
+  .step:hover { border-color: var(--border-strong); }
+  .step-num { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #a78bfa; margin-bottom: 14px; }
+  .step h3 { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .step p { color: var(--muted); font-size: 14px; }
 
   /* ============ FOOTER ============ */
-  .footer {
-    border-top: 1px solid var(--border);
-    margin-top: 20px;
-  }
-
-  .footer-inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 32px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .footer p {
-    color: var(--muted);
-    font-size: 13.5px;
-  }
+  .footer { border-top: 1px solid var(--border); margin-top: 20px; }
+  .footer-inner { max-width: 1120px; margin: 0 auto; padding: 32px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .footer p { color: var(--muted); font-size: 13.5px; }
 
   /* ============ RESPONSIVE ============ */
   @media (max-width: 860px) {
-    .grid-2,
-    .grid-3 {
-      grid-template-columns: 1fr;
-    }
-
-    .nav-links {
-      display: none;
-    }
-
-    .hero {
-      padding-top: 64px;
-    }
-
-    .screenshot-frame {
-      aspect-ratio: 4 / 3;
-      margin-top: 40px;
-    }
-
-    .apps,
-    .how {
-      padding: 60px 24px;
-    }
-
-    .card {
-      padding: 30px 24px 26px;
-    }
-
-    .hero-actions .btn {
-      flex: 1 1 100%;
-    }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .hero { padding-top: 64px; }
+    .apps, .how { padding: 60px 24px; }
+    .card { padding: 30px 24px 26px; }
+    .hero-actions .btn { flex: 1 1 100%; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      transition-duration: 0.01ms !important;
-    }
-    html {
-      scroll-behavior: auto;
-    }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    html { scroll-behavior: auto; }
   }
 </style>
 </head>
@@ -543,11 +223,7 @@
     <div class="nav-inner">
       <a class="logo" href="#">
         <span class="logo-mark">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3v12" />
-            <path d="m7 11 5 5 5-5" />
-            <path d="M5 21h14" />
-          </svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12" /><path d="m7 11 5 5 5-5" /><path d="M5 21h14" /></svg>
         </span>
         MediaVault
       </a>
@@ -561,9 +237,7 @@
   <!-- ============ HERO ============ -->
   <header class="hero">
     <span class="badge"><span class="dot"></span> Free Android Apps</span>
-
     <h1>Two apps.<br><span class="grad">Music &amp; Video.</span> Downloaded.</h1>
-
     <p class="sub">
       Download our free Android apps — a Music Downloader and a Video Downloader.
       One tap, straight to your device. No accounts, no clutter.
@@ -571,40 +245,13 @@
 
     <div class="hero-actions">
       <a class="btn btn-music" href="https://github.com/lovelilke/book/releases/download/1.0.0/music.apk" download="music.apk">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-          <path d="m7 10 5 5 5-5" />
-          <path d="M12 15V3" />
-        </svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><path d="m7 10 5 5 5-5" /><path d="M12 15V3" /></svg>
         Download Music App
       </a>
       <a class="btn btn-video" href="https://github.com/lovelilke/book/releases/download/1.0.0/video.apk" download="video.apk">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-          <path d="m7 10 5 5 5-5" />
-          <path d="M12 15V3" />
-        </svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><path d="m7 10 5 5 5-5" /><path d="M12 15V3" /></svg>
         Download Video App
       </a>
-    </div>
-
-    <!-- ============================================================
-         APP SCREENSHOT
-         ------------------------------------------------------------
-         Replace "screenshot.png" below with your own image file.
-         Until the image exists, the dashed placeholder is shown.
-         ============================================================ -->
-    <div class="screenshot-frame">
-      <div class="screenshot-hint">
-        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="3" width="18" height="18" rx="3" />
-          <circle cx="8.5" cy="8.5" r="1.5" />
-          <path d="m21 15-5-5L5 21" />
-        </svg>
-        <p>App Screenshot</p>
-        <span>Replace <code>screenshot.png</code> with your own image</span>
-      </div>
-      <img class="app-shot" src="screenshot.png" alt="App screenshot" onerror="this.remove()" />
     </div>
   </header>
 
@@ -620,17 +267,18 @@
       <!-- MUSIC APP -->
       <article class="card">
         <div class="card-icon music">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 18V5l12-2v13" />
-            <circle cx="6" cy="18" r="3" />
-            <circle cx="18" cy="16" r="3" />
-          </svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" /></svg>
         </div>
         <h3>Music Downloader</h3>
-        <p>
-          Save tracks, albums and playlists as high-quality audio files.
-          Paste a link, pick a format, and your music is saved to your device.
-        </p>
+        <p>Save tracks, albums and playlists as high-quality audio files. Paste a link, pick a format, and your music is saved to your device.</p>
+
+        <!-- 音乐截图展示区 -->
+        <div class="screenshots-gallery">
+          <img class="gallery-img" src="download/music/1.png" alt="Music App Screenshot 1" loading="lazy" onerror="this.style.display='none'">
+          <img class="gallery-img" src="download/music/2.png" alt="Music App Screenshot 2" loading="lazy" onerror="this.style.display='none'">
+          <img class="gallery-img" src="download/music/3.png" alt="Music App Screenshot 3" loading="lazy" onerror="this.style.display='none'">
+          <img class="gallery-img" src="download/music/4.png" alt="Music App Screenshot 4" loading="lazy" onerror="this.style.display='none'">
+        </div>
 
         <div class="tags">
           <span class="tag">MP3 320kbps</span>
@@ -639,46 +287,29 @@
         </div>
 
         <a class="btn btn-music btn-block" href="https://github.com/lovelilke/book/releases/download/1.0.0/music.apk" download="music.apk">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <path d="m7 10 5 5 5-5" />
-            <path d="M12 15V3" />
-          </svg>
-          Download APK
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><path d="m7 10 5 5 5-5" /><path d="M12 15V3" /></svg>
+          Download Music APK
         </a>
-
         <div class="meta">
-          <span>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="5" y="2" width="14" height="20" rx="2" />
-              <path d="M12 18h.01" />
-            </svg>
-            Android
-          </span>
-          <span>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.6 8.2A9 9 0 0 0 3.4 8.2" />
-              <path d="M3.4 15.8a9 9 0 0 0 17.2 0" />
-              <circle cx="12" cy="12" r="1" />
-            </svg>
-            v1.0.0
-          </span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" /><path d="M12 18h.01" /></svg> Android</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 8.2A9 9 0 0 0 3.4 8.2" /><path d="M3.4 15.8a9 9 0 0 0 17.2 0" /><circle cx="12" cy="12" r="1" /></svg> v1.0.0</span>
         </div>
       </article>
 
       <!-- VIDEO APP -->
       <article class="card">
         <div class="card-icon video">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="5" width="20" height="14" rx="3" />
-            <path d="m10 9.5 4.5 2.5L10 14.5v-5z" fill="currentColor" stroke="none" />
-          </svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3" /><path d="m10 9.5 4.5 2.5L10 14.5v-5z" fill="currentColor" stroke="none" /></svg>
         </div>
         <h3>Video Downloader</h3>
-        <p>
-          Grab videos in the resolution you actually need — from quick clips to
-          full-length uploads, saved as clean MP4 files.
-        </p>
+        <p>Grab videos in the resolution you actually need — from quick clips to full-length uploads, saved as clean MP4 files.</p>
+
+        <!-- 视频截图展示区 -->
+        <div class="screenshots-gallery">
+          <img class="gallery-img" src="download/video/v1.png" alt="Video App Screenshot 1" loading="lazy" onerror="this.style.display='none'">
+          <img class="gallery-img" src="download/video/v2.png" alt="Video App Screenshot 2" loading="lazy" onerror="this.style.display='none'">
+          <img class="gallery-img" src="download/video/v3.png" alt="Video App Screenshot 3" loading="lazy" onerror="this.style.display='none'">
+        </div>
 
         <div class="tags">
           <span class="tag">MP4</span>
@@ -687,30 +318,12 @@
         </div>
 
         <a class="btn btn-video btn-block" href="https://github.com/lovelilke/book/releases/download/1.0.0/video.apk" download="video.apk">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <path d="m7 10 5 5 5-5" />
-            <path d="M12 15V3" />
-          </svg>
-          Download APK
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><path d="m7 10 5 5 5-5" /><path d="M12 15V3" /></svg>
+          Download Video APK
         </a>
-
         <div class="meta">
-          <span>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="5" y="2" width="14" height="20" rx="2" />
-              <path d="M12 18h.01" />
-            </svg>
-            Android
-          </span>
-          <span>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.6 8.2A9 9 0 0 0 3.4 8.2" />
-              <path d="M3.4 15.8a9 9 0 0 0 17.2 0" />
-              <circle cx="12" cy="12" r="1" />
-            </svg>
-            v1.0.0
-          </span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" /><path d="M12 18h.01" /></svg> Android</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 8.2A9 9 0 0 0 3.4 8.2" /><path d="M3.4 15.8a9 9 0 0 0 17.2 0" /><circle cx="12" cy="12" r="1" /></svg> v1.0.0</span>
         </div>
       </article>
 
@@ -723,23 +336,10 @@
       <h2>How to install</h2>
       <p>Three quick steps and you're ready to go.</p>
     </div>
-
     <div class="grid-3">
-      <div class="step">
-        <span class="step-num">01</span>
-        <h3>Download the APK</h3>
-        <p>Tap the download button for the app you want — music or video.</p>
-      </div>
-      <div class="step">
-        <span class="step-num">02</span>
-        <h3>Allow installation</h3>
-        <p>If prompted, enable “Install unknown apps” for your browser in Settings.</p>
-      </div>
-      <div class="step">
-        <span class="step-num">03</span>
-        <h3>Open and enjoy</h3>
-        <p>Open the installed app and start downloading right away.</p>
-      </div>
+      <div class="step"><span class="step-num">01</span><h3>Download the APK</h3><p>Tap the download button for the app you want — music or video.</p></div>
+      <div class="step"><span class="step-num">02</span><h3>Allow installation</h3><p>If prompted, enable “Install unknown apps” for your browser in Settings.</p></div>
+      <div class="step"><span class="step-num">03</span><h3>Open and enjoy</h3><p>Open the installed app and start downloading right away.</p></div>
     </div>
   </section>
 
@@ -747,13 +347,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <a class="logo" href="#">
-        <span class="logo-mark">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3v12" />
-            <path d="m7 11 5 5 5-5" />
-            <path d="M5 21h14" />
-          </svg>
-        </span>
+        <span class="logo-mark"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12" /><path d="m7 11 5 5 5-5" /><path d="M5 21h14" /></svg></span>
         MediaVault
       </a>
       <p>© 2026 MediaVault. Free Android apps for music &amp; video downloads.</p>
