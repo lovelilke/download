@@ -138,32 +138,6 @@
   .card h3 { font-size: 21px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
   .card > p { color: var(--muted); font-size: 14.5px; line-height: 1.65; }
 
-  /* ============ SCREENSHOT GALLERY ============ */
-  .screenshots-gallery {
-    display: flex;
-    gap: 12px;
-    margin-top: 24px;
-    overflow-x: auto;
-    padding-bottom: 8px;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Firefox */
-  }
-  .screenshots-gallery::-webkit-scrollbar { display: none; /* Chrome/Safari */ }
-  
-  .gallery-img {
-    height: 220px;
-    width: auto;
-    flex-shrink: 0;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    object-fit: cover;
-    scroll-snap-align: start;
-    background-color: #1a1a24;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease;
-  }
-  .gallery-img:hover { transform: scale(1.02); }
-
   /* ============ TAGS ============ */
   .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
   .tag { font-size: 12px; font-weight: 500; padding: 5px 11px; border-radius: 8px; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border); color: var(--muted); }
@@ -181,7 +155,9 @@
   .btn:focus-visible { outline: 2px solid #a78bfa; outline-offset: 3px; }
   .btn-music { background: linear-gradient(135deg, #8b5cf6, #6d3fd6); box-shadow: 0 8px 24px -6px rgba(124, 92, 255, 0.6); }
   .btn-video { background: linear-gradient(135deg, #3b82f6, #2563eb); box-shadow: 0 8px 24px -6px rgba(59, 130, 246, 0.6); }
-  .btn-block { width: 100%; margin-top: auto; padding-top: 15px; margin-top: 24px; }
+  
+  /* 关键样式：让下载按钮始终沉底，保持左右卡片高度一致 */
+  .btn-block { width: 100%; margin-top: auto; padding-top: 15px; margin-top: 28px; }
 
   .meta { display: flex; align-items: center; gap: 14px; margin-top: 14px; font-size: 12.5px; color: var(--muted); }
   .meta span { display: inline-flex; align-items: center; gap: 5px; }
@@ -272,14 +248,6 @@
         <h3>Music Downloader</h3>
         <p>Save tracks, albums and playlists as high-quality audio files. Paste a link, pick a format, and your music is saved to your device.</p>
 
-        <!-- 音乐截图展示区 -->
-        <div class="screenshots-gallery">
-          <img class="gallery-img" src="download/music/1.png" alt="Music App Screenshot 1" loading="lazy" onerror="this.style.display='none'">
-          <img class="gallery-img" src="download/music/2.png" alt="Music App Screenshot 2" loading="lazy" onerror="this.style.display='none'">
-          <img class="gallery-img" src="download/music/3.png" alt="Music App Screenshot 3" loading="lazy" onerror="this.style.display='none'">
-          <img class="gallery-img" src="download/music/4.png" alt="Music App Screenshot 4" loading="lazy" onerror="this.style.display='none'">
-        </div>
-
         <div class="tags">
           <span class="tag">MP3 320kbps</span>
           <span class="tag">FLAC</span>
@@ -303,13 +271,6 @@
         </div>
         <h3>Video Downloader</h3>
         <p>Grab videos in the resolution you actually need — from quick clips to full-length uploads, saved as clean MP4 files.</p>
-
-        <!-- 视频截图展示区 -->
-        <div class="screenshots-gallery">
-          <img class="gallery-img" src="download/video/v1.png" alt="Video App Screenshot 1" loading="lazy" onerror="this.style.display='none'">
-          <img class="gallery-img" src="download/video/v2.png" alt="Video App Screenshot 2" loading="lazy" onerror="this.style.display='none'">
-          <img class="gallery-img" src="download/video/v3.png" alt="Video App Screenshot 3" loading="lazy" onerror="this.style.display='none'">
-        </div>
 
         <div class="tags">
           <span class="tag">MP4</span>
